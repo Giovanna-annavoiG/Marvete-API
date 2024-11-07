@@ -305,7 +305,7 @@ strong{
 
 .tv-show-image {
     width: 100%;
-    height: 500px; /* Tamanho fixo para as imagens */
+    height: 350px; /* Tamanho fixo para as imagens */
     object-fit: cover; /* Ajusta a imagem para cobrir o card */
 }
 

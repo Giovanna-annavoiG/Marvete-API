@@ -301,6 +301,7 @@ strong{
     width: 100%; /* Garante que o card ocupe a largura disponível */
     max-width: 400px; /* Define a largura máxima do card */
     height: 500px; /* Tamanho fixo para os cards */
+    
 }
 
 .tv-show-image {
@@ -316,18 +317,15 @@ strong{
     color: rgb(241, 236, 236);
     font-family: 'Anton', sans-serif;
     font-weight: lighter; /* Aumenta o peso da fonte */
-}
-
-.tv-show-description {
-    font-size: 14px; /* Tamanho da descrição */
-    color: #e9e9e9;
-    margin-top: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
 }
 
 .tv-show-release-date {
     font-size: 12px; /* Tamanho da data de lançamento */
     color: #d4d4d4;
     margin-top: 5px;
+    padding-left: 10px;
 }
 
 

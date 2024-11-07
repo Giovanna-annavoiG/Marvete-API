@@ -38,16 +38,11 @@ function displayMarvelTVShows(shows) {
         title.classList.add('tv-show-title');
         title.textContent = show.name;
 
-        const description = document.createElement('p');
-        description.classList.add('tv-show-description');
-        description.textContent = show.overview || "Descrição não disponível.";
-
         const releaseDate = document.createElement('p');
         releaseDate.classList.add('tv-show-release-date');
         releaseDate.textContent = `Data de lançamento: ${show.first_air_date}`;
-
+        
         content.appendChild(title);
-        content.appendChild(description);
         content.appendChild(releaseDate);
         card.appendChild(image);
         card.appendChild(content);

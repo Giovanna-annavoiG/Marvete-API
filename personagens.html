@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvete</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="corpo">
+    <nav class="navbar"> 
+        <ul>
+            <li>
+                <i class="fas fa-home"></i>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <i class="fas fa-user"></i>
+                <a href="personagens.html">Personagens</a>
+            </li>
+            <li>
+                <i class="fas fa-book"></i>
+                <a href="quadrinhos.hmtl">Quadrinhos</a>
+            </li>
+            <li>
+                <i class="fas fa-tv"></i>
+                <a href="series.html">Séries</a>
+            </li>
+            <li>
+                <i class="fas fa-gamepad"></i>
+                <a href="jogos.html">Jogos</a>
+            </li>
+        </ul>
+    </nav>
+    <input type="text" id="search-input" placeholder="Buscar herói..." class="search-input">
+    <button id="search-button" class="search-button">Pesquisar</button>
+    <div class="hero-container" id="hero-container">
+    <div class="hero-card" id="hero-card">
+        <!-- <img src="url-da-imagem-do-heroi.jpg" alt="Nome do Herói" class="hero-card-image"> -->
+        
+        <div class="hero-card-content" id="hero-card-content">
+            <h3 class="hero-card-title" id="hero-card-title">Nome do Herói</h3>
+            <p class="hero-card-id" id="hero-card-id">ID: 12345</p>
+            <p class="hero-card-description" id="hero-card-description">Descrição breve do herói.</p>
+        </div>
+
+    </div>
+</div>
+<script src="personagem.js"></script> 
+
+</body>
+</html>

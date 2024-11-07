@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Posiciona no topo da página */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa toda a largura da página */
+    background-color: #A50000; /* Vermelho da Marvel */
+    padding: 10px 0; /* Espaçamento vertical */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+}
+
+.navbar li {
+    text-align: center;
+    width: 120px; /* Largura fixa para os itens */
+    margin: 0 10px; /* Espaço lateral entre os itens */
+    transition: background 0.3s;
+    padding: 10px 0 5px 0;
+}
+
+.navbar li:hover {
+    background-color: #7E0000; /* Tom mais escuro ao passar o mouse */
+    border-radius: 5%;
+}
+
+.navbar i {
+    display: block; /* Coloca o ícone em uma nova linha */
+    font-size: 24px; /* Tamanho do ícone */
+    margin-bottom: 5px; /* Espaço entre o ícone e o texto */
+    color: rgb(255, 255, 255); /* Cor do ícone */
+}
+
+.navbar a {
+    color: white; /* Cor do texto */
+    text-decoration: none;
+    padding: 5px; /* Espaçamento interno */
+    display: block; /* Faz o link ocupar todo o espaço do item */
+    font-weight: bold;
+}
+
+
+/* CAPA PRINCIPAL */
+.banner{
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra abaixo do banner */
+}
+
+.banner-image {
+    width: 100%; /* Ajusta a imagem para ocupar toda a largura */
+    height: 100%; /* Mantém a proporção da imagem */
+    object-fit: cover;
+    object-position: center top;
+  
+}
+
+
+/* CARD DO INDEX*/
+.cards {
+    display: flex;
+    justify-content: space-around; /* Espaçamento igual entre os cards */
+    margin: 40px 0; /* Espaço acima e abaixo dos cards */
+}
+
+.card {
+    background-color: #ffffff; /* Cor de fundo dos cards */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 450px; /* Largura dos cards */
+    height: 150px; /* Altura dos cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombra leve */
+    transition: transform 0.3s; /* Efeito de transição */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o card ao passar o mouse */
+}
+strong{
+    color: red;
+}
+
+/* CARD DOS PERSONAGENS */
+.corpo{
+    padding-top: 100px;
+}/* Container dos Personagens */
+.hero-container {
+    padding-top: 20px; /* Espaço superior */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards por linha */
+    gap: 20px; /* Espaço entre os cards */
+    padding: 20px; /* Espaço interno ao redor do contêiner */
+}
+
+/* Card dos Personagens */
+.hero-card {
+    background-color: #a30303;
+    border-radius: 8px;
+    border-bottom-right-radius: 55px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s; /* Efeito ao passar o mouse */
+    text-align: left; 
+}
+
+.hero-card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o card */
+}
+
+.hero-card-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hero-card-content {
+    padding: 15px;
+    text-align: left; /* Centraliza o conteúdo do texto */
+}
+
+.hero-card-title {
+    margin: 0;
+    font-size: 20px;
+    color: rgb(241, 236, 236);
+    font-family: 'Anton', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 4px;
+}
+
+.hero-card-id {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #d4d4d4;
+}
+
+.hero-card-description {
+    font-size: 15px;
+    color: #e9e9e9;
+    margin-top: 5px;
+}
+
+.search-input {
+    padding: 10px;
+    margin: 20px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #A50000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #7E0000; /* Cor ao passar o mouse */
+}
+
+/* QUADRINHOS */
+.comic-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    justify-content: space-around; /* Distribui os cards com espaço entre eles */
+    gap: 20px; /* Espaço entre os cards */
+    padding: 20px; /* Espaço ao redor do container */
+}
+
+.comic-card {
+    width: 400px; /* Define uma largura fixa para todos os cards */
+    height: 500px;
+    background-color: #a30303;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 55px;
+}
+
+.comic-card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o card */
+}
+
+.comic-card img {
+    width: 100%; /* A imagem ocupará toda a largura do card */
+    height: 300px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Ajusta a imagem dentro do card */
+}
+
+.comic-card-title {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #fff;
+    padding: 0 10px; /* Espaço para alinhar o texto com os outros elementos */
+}
+
+.comic-card-description {
+    font-size: 14px;
+    color: #e9e9e9;
+    margin: 5px 10px 10px; /* Espaçamento no topo e inferior */
+}
+
+
+/* SERIES */
+.series-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+.series-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: calc(20% - 20px); /* 5 cards por linha, considerando o gap */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para evitar que as imagens ultrapassem o card */
+    transition: transform 0.3s;
+}
+
+.series-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.series-card-image {
+    width: 100%; /* Ajusta a imagem para caber no card */
+    height: 500px; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Cobre todo o espaço, mantendo a proporção */
+
+}
+
+.series-card-content {
+    padding: 10px; /* Espaçamento interno do conteúdo do card */
+}
+
+.series-card-title {
+    font-size: 1.2em; /* Tamanho do título */
+    margin: 0; /* Remove margens padrões */
+}
+
+.series-card-description {
+    color: #666; /* Cor do texto da descrição */
+    font-size: 0.9em; /* Tamanho da fonte da descrição */
+}
+
+
+
+
+
+/* STORIES */
+/* Container para as histórias */
+/* Contêiner para as séries */
+/* Contêiner das séries */
+/* Contêiner das séries */
+.tv-show-container {
+    padding-top: 20px; /* Espaço superior */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards por linha */
+    gap: 20px; /* Espaço entre os cards */
+    padding: 20px; /* Espaço interno ao redor do contêiner */
+}
+
+/* Card das Séries */
+.tv-show-card {
+    background-color: #a30303;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s; /* Efeito ao passar o mouse */
+    text-align: left; 
+    display: flex; /* Para alinhar o conteúdo */
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    border-bottom-right-radius: 55px;
+}
+
+.tv-show-card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o card ao passar o mouse */
+}
+
+.tv-show-image {
+    width: 100%;
+    height: 500px; /* Tamanho fixo para as imagens */
+    object-fit: cover; /* Ajusta a imagem para cobrir o card */
+}
+
+.tv-show-content {
+    padding: 15px;
+}
+
+#main-container { /* Exemplo de ID para o contêiner principal */
+    max-width: 2200px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+
+.tv-show-title {
+    margin: 0;
+    font-size: 18px; /* Tamanho do título */
+    color: rgb(241, 236, 236);
+    font-family: 'Anton', sans-serif;
+    font-weight: lighter; /* Aumenta o peso da fonte */
+}
+
+.tv-show-description {
+    font-size: 14px; /* Tamanho da descrição */
+    color: #e9e9e9;
+    margin-top: 5px;
+}
+
+.tv-show-release-date {
+    font-size: 12px; /* Tamanho da data de lançamento */
+    color: #d4d4d4;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+/* CSS DOS FILMES */
+/* Contêiner dos Filmes */
+/* Contêiner dos Filmes */
+.movie-container {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards por linha */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card dos Filmes */
+.movie-card {
+    background-color: #a30303;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 55px;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card-image {
+    width: 100%;
+    height: 350px; /* Tamanho fixo para as imagens */
+    object-fit: cover;
+}
+
+.movie-card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.movie-card-title {
+    margin: 0;
+    font-size: 18px;
+    color: #f1ecec;
+    font-family: 'Anton', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.movie-card-release {
+    font-size: 14px;
+    color: #d4d4d4;
+}
+
+/* Estilo do botão de pesquisa, se houver */
+
+
+/* Contêiner principal para centralizar conteúdo */
+#main-container {
+    max-width: 2200px;
+    margin: 0 auto;
+}
